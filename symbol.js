@@ -21,7 +21,9 @@ console.log([...iterable1]);
 
 
 console.log(Symbol('desc').toString());
+// expecting output is symbol.('desc');
 console.log(Symbol.iterator.toString());
+//expected output is symbol(symbol,iterator);
 
 
 
