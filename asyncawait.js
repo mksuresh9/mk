@@ -13,13 +13,16 @@ const asyncfun3 = async ()=>{
         setTimeout(()=>resolve('verified data'), 3000);
     });
 
-    let loaded  = await loaduserdata;
+
+    let result = await Promise.all([loaduserdata, verifieddata]);
+       return result;
+    /*let loaded  = await loaduserdata;
     console.log("loaduserdata");
     console.log("loaded");
 
     let verified=  await verifieddata;
     
-    return verifieddata;
+    return verifieddata;*/
 }
 
 asyncfun3().then((i)=>console.log(i));
